@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TicTacToeDB" Class="TicTacToeGameDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\TicTacToeDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TicTacToeDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Boards" Member="Boards">
+    <Type Name="Board">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mode" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Board_GamesHistory" Member="GamesHistories" ThisKey="Id" OtherKey="boardID" Type="GamesHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlayersChamps" Member="PlayersChamps">
+    <Type Name="PlayersChamp">
+      <Column Name="playerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="champID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Champ_PlayersChamp" Member="Champ" ThisKey="champID" OtherKey="Id" Type="Champ" IsForeignKey="true" />
+      <Association Name="Player_PlayersChamp" Member="Player" ThisKey="playerID" OtherKey="id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Champs" Member="Champs">
+    <Type Name="Champ">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Champ_PlayersChamp" Member="PlayersChamps" ThisKey="Id" OtherKey="champID" Type="PlayersChamp" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GamesHistory" Member="GamesHistories">
+    <Type Name="GamesHistory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="boardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="losser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="winner" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="steps" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Board_GamesHistory" Member="Board" ThisKey="boardID" OtherKey="Id" Type="Board" IsForeignKey="true" />
+      <Association Name="Player_GamesHistory" Member="Player" ThisKey="losser" OtherKey="id" Type="Player" IsForeignKey="true" />
+      <Association Name="Player_GamesHistory1" Member="Player1" ThisKey="winner" OtherKey="id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlayerRank" Member="PlayerRanks">
+    <Type Name="PlayerRank">
+      <Column Name="rank" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="PlayerRank_Player" Member="Players" ThisKey="rank" OtherKey="rank" Type="Player" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Players" Member="Players">
+    <Type Name="Player">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="lastName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="rank" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Player_PlayersChamp" Member="PlayersChamps" ThisKey="id" OtherKey="playerID" Type="PlayersChamp" />
+      <Association Name="Player_GamesHistory" Member="GamesHistories" ThisKey="id" OtherKey="losser" Type="GamesHistory" />
+      <Association Name="Player_GamesHistory1" Member="GamesHistories1" ThisKey="id" OtherKey="winner" Type="GamesHistory" />
+      <Association Name="Player_PlayersAdviser" Member="PlayersAdviser" ThisKey="id" OtherKey="adviserID" Type="PlayersAdviser" Cardinality="One" />
+      <Association Name="Player_PlayersAdviser1" Member="PlayersAdvisers" ThisKey="id" OtherKey="playerID" Type="PlayersAdviser" />
+      <Association Name="PlayerRank_Player" Member="PlayerRank" ThisKey="rank" OtherKey="rank" Type="PlayerRank" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlayersAdvisers" Member="PlayersAdvisers">
+    <Type Name="PlayersAdviser">
+      <Column Name="adviserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="playerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Player_PlayersAdviser" Member="Player" ThisKey="adviserID" OtherKey="id" Type="Player" IsForeignKey="true" />
+      <Association Name="Player_PlayersAdviser1" Member="Player1" ThisKey="playerID" OtherKey="id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

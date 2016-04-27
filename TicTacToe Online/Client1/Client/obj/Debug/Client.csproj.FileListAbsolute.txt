@@ -1,0 +1,32 @@
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\bin\Debug\Client.exe.config
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\bin\Debug\Client.exe
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\bin\Debug\Client.pdb
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\UserControls\BoardControl.baml
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\UserControls\QueryResultUserControl.baml
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\UserControls\BoardControl.g.cs
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\UserControls\QueryResultUserControl.g.cs
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client_MarkupCompile.cache
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.g.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.AboutBox.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.ChampForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.GameControl.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.MainForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.HistoryForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.LogInForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.QueryForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.registerForm.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.RoomsControl.resources
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.exe
+D:\Dropbox\משותף\אורן\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.pdb
+C:\Users\אורן\Dropbox\משותף\שגיא\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\bin\Debug\Client.exe.config
+C:\Users\אורן\Dropbox\משותף\שגיא\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.exe
+C:\Users\אורן\Dropbox\משותף\שגיא\שנה ג\סמסטר ב\C#\Project\workspace\Client1\Client\obj\Debug\Client.pdb
+D:\Programs & Apps\C#\workspace\Client1\Client\bin\Debug\Client.exe.config
+D:\Programs & Apps\C#\workspace\Client1\Client\obj\Debug\Client.exe
+D:\Programs & Apps\C#\workspace\Client1\Client\obj\Debug\Client.pdb
+C:\Users\Sagi\GitHub\Online-TicTacToe\TicTacToe Online\Client1\Client\bin\Debug\Client.exe.config
+C:\Users\Sagi\GitHub\Online-TicTacToe\TicTacToe Online\Client1\Client\obj\Debug\Client.exe
+C:\Users\Sagi\GitHub\Online-TicTacToe\TicTacToe Online\Client1\Client\obj\Debug\Client.pdb
